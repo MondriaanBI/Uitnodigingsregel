@@ -1,6 +1,9 @@
 {
-  "name": "Python Development with uv",
-  "image": "astral-sh/uv:latest",
+  "name": "Streamlit Development",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
   "postStartCommand": "nohup bash -c 'uv run --with jupyter jupyter lab --link-mode=copy &'",
   "forwardPorts": [8888],
   "portsAttributes": {
