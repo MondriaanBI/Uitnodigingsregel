@@ -1,6 +1,6 @@
 {
   "name": "Python Development with uv",
-  "image": "ghcr.io/astral-sh/uv:latest",
+  "image": "astral-sh/uv:latest",
   "postStartCommand": "nohup bash -c 'uv run --with jupyter jupyter lab --link-mode=copy &'",
   "forwardPorts": [8888],
   "portsAttributes": {
