@@ -4,5 +4,5 @@
   "features": {
     "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {}
   },
-  "postCreateCommand": "uv --version"
+  "postStartCommand": "nohup bash -c 'uv run --with jupyter jupyter lab &'"
 }
