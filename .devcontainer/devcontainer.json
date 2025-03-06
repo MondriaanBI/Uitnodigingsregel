@@ -1,0 +1,17 @@
+{
+    "name": "Streamlit Development",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": ".."
+    },
+    "forwardPorts": [8888], // Forward port based on standard Jupyter ports
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance"
+        ]
+      }
+    },
+    "postCreateCommand": "uv run --with jupyter jupyter lab"
+  }
