@@ -4,5 +4,12 @@
   "features": {
     "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {}
   },
-  "postStartCommand": "nohup bash -c 'uv run --with jupyter jupyter lab'"
+  "postStartCommand": "nohup bash -c 'uv run --with jupyter jupyter lab --link-mode=copy' &",
+  "forwardPorts": [8888],
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter Lab",
+      "onAutoForward": "notify"
+    }
+  }
 }
