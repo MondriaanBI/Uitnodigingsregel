@@ -1,7 +1,12 @@
 {
   "name": "Python Development with uv",
-  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "image": "ghcr.io/astral-sh/uv:python3.13-bookworm-slim",
+  
+  // Run commands after container creation
+  "postCreateCommand": "uv sync",
+
+  // Add features like additional tools
   "features": {
-    "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {}
+    "ghcr.io/devcontainers/features/git:1": {}
   }
 }
