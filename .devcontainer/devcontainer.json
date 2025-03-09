@@ -1,7 +1,7 @@
 {
   "name": "Python Development with uv",
   "image": "ghcr.io/astral-sh/uv:python3.13-bookworm-slim",
-  
+  "forwardPorts": [8888],
   // Run commands after container creation
   "postCreateCommand": "uv sync",
 
